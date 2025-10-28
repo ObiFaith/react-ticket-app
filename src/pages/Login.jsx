@@ -67,7 +67,7 @@ export const Login = () => {
           <p>
             Don't have an account?{" "}
             <a
-              href="/signup"
+              href="/auth/signup"
               className="text-primary-400 hover:text-primary-600 hover:underline"
             >
               Create Account

@@ -10,7 +10,7 @@ export const Sidebar = ({ isToggle }) => {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/auth/login");
   };
 
   return (

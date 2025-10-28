@@ -70,7 +70,7 @@ export const Signup = () => {
           <p>
             Already have an account?{" "}
             <a
-              href="/login"
+              href="/auth/login"
               className="text-primary-400 hover:text-primary-600 hover:underline"
             >
               Login

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useAuth } from ".";
 import { apiUrl } from "../constant";
 import { createContext, useContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const TicketContext = createContext();
 
@@ -31,6 +32,7 @@ export const TicketProvider = ({ children }) => {
         setTicketCount(counts);
       } catch (err) {
         console.error(err);
+        toast.error('Failed to load tickets. Please retry.')
       } finally {
         setLoading(false);
       }

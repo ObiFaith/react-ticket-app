@@ -8,8 +8,8 @@ export const ProtectedRoute = ({ children }) => {
   if (loading) return <div className="loader"></div>;
 
   if (!user && !loading) {
-    toast.error("Session expired! Please log in again.");
-    return <Navigate to="/login" replace />;
+    toast.error("Your session has expired — please log in again.");
+    return <Navigate to="/auth/login" replace />;
   }
 
   return children;

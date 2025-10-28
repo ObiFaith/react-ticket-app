@@ -7,7 +7,7 @@ export const TicketCards = ({ ticketCount }) => {
         <div className="p-2 rounded-full bg-yellow-200 text-yellow-700">
           <Ticket />
         </div>
-        <div className="">
+        <div>
           <p>Total Tickets</p>
           <h2 className="font-semibold text-xl md:text-2xl">
             {ticketCount.totalTickets}
@@ -29,7 +29,7 @@ export const TicketCards = ({ ticketCount }) => {
         <div className="p-2 rounded-full bg-red-50 text-red-700">
           <X strokeWidth={2} />
         </div>
-        <div className="">
+        <div>
           <p>Resolved Tickets</p>
           <h2 className="font-semibold text-xl md:text-2xl">
             {ticketCount.resolvedTickets}

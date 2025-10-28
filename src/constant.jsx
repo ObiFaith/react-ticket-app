@@ -3,9 +3,9 @@ import { LayoutGrid } from "lucide-react";
 export const apiUrl = import.meta.env.VITE_API_URL;
 
 export const ticketStatus = {
-  open: "bg-green-400",
-  closed: "bg-red-400",
-  in_progress: "bg-yellow-400",
+  open: "bg-green-500/90",
+  closed: "bg-red-500/90",
+  in_progress: "bg-yellow-600",
 };
 
 export const ticketPriority = {

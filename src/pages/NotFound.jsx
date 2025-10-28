@@ -4,7 +4,7 @@ export const NotFound = () => {
   return (
     <main className="container pt-20 px-6 flex justify-center text-center items-center">
       <section>
-        <img width="500" src="../public/404.svg" alt="Not Found Image" />
+        <img width="500" src="../404.svg" alt="Not Found Image" />
         <h1 className="text-xl pt-10 pb-2 md:text-2xl font-semibold">
           Page Not Found!
         </h1>

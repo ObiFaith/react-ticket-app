@@ -1,7 +1,6 @@
-import { TicketList } from ".";
 import { Link } from "react-router";
 import { useTicket } from "../../context";
-import { NotebookText, Ticket, X } from "lucide-react";
+import { TicketCards, TicketList } from ".";
 
 export const Dashboard = () => {
   const { tickets, ticketCount } = useTicket();
@@ -16,52 +15,17 @@ export const Dashboard = () => {
           </p>
         </div>
         {tickets.length > 0 && (
-          <Link
-            to="/dashboard/tickets"
-            className="button max-w-40 text-center"
-          >
+          <Link to="/dashboard/tickets" className="button max-w-40 text-center">
             Create Ticket
           </Link>
         )}
       </div>
       {tickets.length > 0 ? (
-        <div className="">
-          <div className="md:flex *:w-full gap-4 py-10 md:gap-6">
-            <div className="flex gap-4 items-center shadow-md rounded-md py-6 px-10">
-              <div className="p-2 bg-yellow-200 rounded-full text-yellow-700">
-                <Ticket />
-              </div>
-              <div className="">
-                <p>Total Tickets</p>
-                <h2 className="font-semibold text-xl md:text-2xl">
-                  {ticketCount.totalTickets}
-                </h2>
-              </div>
-            </div>
-            <div className="flex gap-4 items-center shadow-md rounded-md py-6 px-10">
-              <div className="p-2 bg-green-200 rounded-full text-green-700">
-                <NotebookText strokeWidth={2} />
-              </div>
-              <div>
-                <p>Open Tickets</p>
-                <h2 className="font-semibold text-xl md:text-2xl">
-                  {ticketCount.openTickets}
-                </h2>
-              </div>
-            </div>
-            <div className="flex gap-4 items-center shadow-md rounded-md py-6 px-10">
-              <div className="p-2 bg-red-200 rounded-full text-red-700">
-                <X className="size-5" strokeWidth={2} />
-              </div>
-              <div className="">
-                <p>Resolved Tickets</p>
-                <h2 className="font-semibold text-xl md:text-2xl">
-                  {ticketCount.resolvedTickets}
-                </h2>
-              </div>
-            </div>
-          </div>
-          <TicketList tickets={tickets} ticketCount={ticketCount} />
+        <div className="space-y-4">
+          <TicketCards ticketCount={ticketCount} />
+          {tickets.map(ticket => (
+            <TicketList key={ticket.id} ticket={ticket} />
+          ))}
         </div>
       ) : (
         <div className="flex flex-col justify-center py-10 text-center items-center">

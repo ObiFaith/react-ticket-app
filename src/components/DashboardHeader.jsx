@@ -6,7 +6,7 @@ export const DashboardHeader = ({ handleToggle }) => {
   const fullName = `${user.lastName} ${user.firstName}`;
 
   return (
-    <header className="bg-white py-6 px-5">
+    <header className="bg-white border-b-2 border-grey-400/50 py-6 lg:px-16 md:px-9 px-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="cursor-pointer" onClick={handleToggle}>
@@ -17,7 +17,7 @@ export const DashboardHeader = ({ handleToggle }) => {
             <span className="font-semibold">{user ? fullName : "User"}</span>
           </h2>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex max-[500px]:hidden items-center gap-3">
           <Bell className="size-5" />
           <div className="text-xl items-center flex gap-1 text-center">
             {user.imageUrl ? (

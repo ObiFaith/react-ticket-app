@@ -5,7 +5,15 @@ import { createRoot } from "react-dom/client";
 import { AuthProvider, TicketProvider } from "./context";
 import { DashboardLayout, ProtectedRoute } from "./layouts";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { Error, Login, NotFound, Signup, Tickets, Dashboard } from "./pages";
+import {
+  Error,
+  Login,
+  NotFound,
+  Signup,
+  Tickets,
+  Dashboard,
+  TicketDetail,
+} from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "tickets",
         element: <Tickets />,
+      },
+      {
+        path: "tickets/:id",
+        element: <TicketDetail />,
       },
     ],
   },

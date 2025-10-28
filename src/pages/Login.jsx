@@ -15,7 +15,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="container bg-white grid place-items-center min-h-svh px-6 py-16">
+    <main className="container bg-white grid place-items-center px-6 py-16">
       <section className="lg:w-5/6 mx-auto justify-between lg:flex">
         <div className="lg:w-5/12 text-center">
           {/* Logo */}
@@ -45,7 +45,7 @@ export const Login = () => {
                   navigate("/dashboard");
                 }, 800);
               } catch (error) {
-                toast.error(error.response?.data?.message || error.message);
+                toast.error(error.response?.data?.message || 'Please try again later!');
               }
               setSubmitting(false);
             }}

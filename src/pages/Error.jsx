@@ -3,7 +3,7 @@ import { Link, useRouteError } from "react-router";
 export const Error = () => {
   const error = useRouteError();
   return (
-    <main className="container text-lg flex justify-center text-center min-h-svh items-center">
+    <main className="container text-lg flex justify-center text-center  items-center">
       <section>
         <h1 className="text-3xl md:text-4xl py-4 font-semibold">Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>

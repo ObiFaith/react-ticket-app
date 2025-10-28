@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export const NotFound = () => {
   return (
-    <main className="container px-6 flex justify-center text-center min-h-svh items-center">
+    <main className="container px-6 flex justify-center text-center  items-center">
       <section>
         <img width="500" src="./not-found.svg" alt="Not Found Image" />
         <h1 className="text-xl pt-10 pb-2 md:text-2xl font-semibold">

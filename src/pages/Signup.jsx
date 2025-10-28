@@ -15,7 +15,7 @@ export const Signup = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="container px-6 bg-white grid place-items-center min-h-svh py-16">
+    <main className="container px-6 bg-white grid place-items-center  py-16">
       <section className="lg:w-5/6 mx-auto justify-between lg:flex">
         <div className="lg:w-5/12 text-center">
           {/* Logo */}

@@ -37,7 +37,7 @@ input,
 
 button,
 .button {
-  @apply text-white w-full inline-block disabled:opacity-50 bg-primary-400 tracking-wide not-disabled:hover:bg-primary-600 py-2.5 not-disabled:cursor-pointer font-semibold rounded-lg;
+  @apply text-white w-full inline-block transition-all disabled:opacity-50 bg-primary-400 tracking-wide not-disabled:hover:bg-primary-600 py-2.5 not-disabled:cursor-pointer font-semibold rounded-lg;
 }
 
 @layer utilities {

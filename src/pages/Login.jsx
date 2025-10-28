@@ -7,7 +7,7 @@ import { Form, Formik } from "formik";
 import { Input } from "../components";
 import { useAuth } from "../context/Auth";
 import { useNavigate } from "react-router";
-import { LoginFields, LoginValues } from "../form";
+import { LoginFields, LoginSchema, LoginValues } from "../form";
 
 export const Login = () => {
   const formikRef = useRef();
@@ -30,6 +30,7 @@ export const Login = () => {
           <Formik
             innerRef={formikRef}
             initialValues={LoginValues}
+            validationSchema={LoginSchema}
             onSubmit={async (values, { setSubmitting }) => {
               setSubmitting(true);
               try {
@@ -45,7 +46,9 @@ export const Login = () => {
                   navigate("/dashboard");
                 }, 800);
               } catch (error) {
-                toast.error(error.response?.data?.message || 'Please try again later!');
+                toast.error(
+                  error.response?.data?.message || "Please try again later!"
+                );
               }
               setSubmitting(false);
             }}

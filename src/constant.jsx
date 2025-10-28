@@ -1,6 +1,5 @@
 import { LayoutGrid } from "lucide-react";
 
-export const token = localStorage.getItem("token");
 export const apiUrl = import.meta.env.VITE_API_URL;
 
 export const ticketStatus = {

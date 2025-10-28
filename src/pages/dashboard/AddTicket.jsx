@@ -2,14 +2,16 @@ import axios from "axios";
 import { useRef } from "react";
 import { Link } from "react-router";
 import toast from "react-hot-toast";
+import { apiUrl } from "../../constant";
 import { ArrowLeft } from "lucide-react";
 import { Input } from "../../components";
+import { useTicket } from "../../context";
 import { Field, Form, Formik } from "formik";
-import { apiUrl, token } from "../../constant";
 import { TicketFields, TicketSchema, TicketValues } from "../../form";
 
-export const Tickets = () => {
+export const AddTicket = () => {
   const formikRef = useRef();
+  const { setTickets, setTicketCount } = useTicket();
 
   return (
     <div className="bg-white p-6 rounded-lg">
@@ -32,11 +34,18 @@ export const Tickets = () => {
         onSubmit={async (values, { setSubmitting }) => {
           setSubmitting(true);
           try {
+            const token = localStorage.getItem("token");
             const { data } = await axios.post(
               `${apiUrl}/api/v1/tickets`,
               values,
               { headers: { Authorization: `Bearer ${token}` } }
             );
+            setTickets(tickets => [...tickets, data.ticket]);
+            setTicketCount(ticketCounts => ({
+              ...ticketCounts,
+              openTickets: ticketCounts.openTickets + 1,
+              totalTickets: ticketCounts.totalTickets + 1,
+            }));
             formikRef.current?.resetForm();
             toast.success(data.message);
           } catch (error) {

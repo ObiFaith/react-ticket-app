@@ -10,7 +10,7 @@ export const TicketProvider = ({ children }) => {
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [ticketCount, setTicketCount] = useState({
-    totalTicket: 0,
+    totalTickets: 0,
     openTickets: 0,
     resolvedTickets: 0,
   });
@@ -41,7 +41,7 @@ export const TicketProvider = ({ children }) => {
 
   return (
     <TicketContext.Provider
-      value={{ tickets, ticketCount, loading, setTickets }}
+      value={{ tickets, ticketCount, loading, setTickets, setTicketCount }}
     >
       {children}
     </TicketContext.Provider>

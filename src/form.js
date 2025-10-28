@@ -76,6 +76,13 @@ export const TicketSchema = Yup.object({
   description: Yup.string(),
 });
 
+export const LoginSchema = Yup.object({
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required!"),
+  password: Yup.string().required("Password is required!"),
+});
+
 export const SignupSchema = Yup.object({
   firstName: Yup.string()
     .min(3, "First name must be at least 3 characters")
@@ -98,4 +105,4 @@ export const SignupSchema = Yup.object({
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "Password does not match!")
     .required("Please confirm your password!"),
-});
+}).concat(LoginSchema);

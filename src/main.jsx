@@ -10,7 +10,7 @@ import {
   Login,
   NotFound,
   Signup,
-  Tickets,
+  AddTicket,
   Dashboard,
   TicketDetail,
 } from "./pages";
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: "tickets",
-        element: <Tickets />,
+        element: <AddTicket />,
       },
       {
         path: "tickets/:id",

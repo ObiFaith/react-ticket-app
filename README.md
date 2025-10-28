@@ -4,6 +4,24 @@ A full-featured ticket management application built with React, designed to test
 
 This React version implements the same unified design and functionality as its Vue.js and Twig counterparts — ensuring identical user experience across all frameworks.
 
+## Table of Contents
+
+- [🎫 Ticket Management Web App (React)](#-ticket-management-web-app-react)
+  - [Table of Contents](#table-of-contents)
+  - [📖 Overview](#-overview)
+  - [🚀 Features](#-features)
+    - [Field Rules](#field-rules)
+    - [Status Colors](#status-colors)
+  - [🎨 Design \& Layout](#-design--layout)
+  - [⚠️ Validation \& Error Handling](#️-validation--error-handling)
+  - [🔑 Authentication Logic](#-authentication-logic)
+  - [🧰 Tech Stack](#-tech-stack)
+  - [📁 Folder Structure](#-folder-structure)
+  - [⚙️ Setup \& Installation](#️-setup--installation)
+  - [📜 License](#-license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 📖 Overview
 
 The **Ticket Management Web App (React)** allows users to:

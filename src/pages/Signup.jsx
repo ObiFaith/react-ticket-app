@@ -80,7 +80,7 @@ export const Signup = () => {
         <div className="lg:w-1/2 max-lg:hidden flex justify-end items-center">
           <img
             className="w-full"
-            src="./oc-on-the-laptop.svg"
+            src="../public/oc-on-the-laptop.svg"
             alt="A man on his laptop using Tixly"
           />
         </div>

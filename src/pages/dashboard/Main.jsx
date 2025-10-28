@@ -31,7 +31,7 @@ export const Dashboard = () => {
         <div className="flex flex-col justify-center py-10 text-center items-center">
           <img
             width={300}
-            src="./oc-on-the-laptop.svg"
+            src="../public/oc-on-the-laptop.svg"
             alt="A man on his laptop using Tixly"
           />
           <h2 className="text-lg md:text-xl font-medium pt-8">
